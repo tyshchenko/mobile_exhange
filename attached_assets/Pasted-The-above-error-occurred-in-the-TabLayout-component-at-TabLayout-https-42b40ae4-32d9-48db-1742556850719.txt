@@ -1,0 +1,98 @@
+The above error occurred in the <TabLayout> component:
+
+    at TabLayout (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:57973:60)
+    at Suspense
+    at Route (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:58312:5)
+    at https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:58681:11
+    at StaticContainer (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:65969:18)
+    at EnsureSingleNavigator (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:60976:5)
+    at SceneView (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:65860:5)
+    at div
+    at https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:40683:27
+    at AnimatedHeaderHeightProvider (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:88676:5)
+    at div
+    at https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:40683:27
+    at div
+    at https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:40683:27
+    at https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:51709:62
+    at Background (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:69372:9)
+    at Screen (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:73751:73)
+    at div
+    at https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:40683:27
+    at SafeAreaProviderCompat (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:73636:5)
+    at NativeStackView (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:88573:5)
+    at PreventRemoveProvider (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:64581:5)
+    at NavigationContent (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:65587:5)
+    at https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:65603:7
+    at NativeStackNavigator (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:88379:9)
+    at https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:58206:21
+    at ThemeProvider (https://42b40ae4-32d9-48db-8e60-3a63d779891a-00-2ooi2l7kbbr82.riker.replit.dev/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.routerRoot=app:62269:5)
+    at RootLayout…
+5
+
+
+Log 1 of 5
+
+Uncaught Error
+Cannot read properties of undefined (reading 'light')
+Source
+ 
+  7 |
+ 
+export
+ 
+default
+ 
+function
+ 
+TabLayout
+() {
+ 
+  8 |
+   
+const
+ colorScheme 
+=
+ useColorScheme()
+;
+>
+  9 |
+   
+const
+ theme 
+=
+ 
+Colors
+[colorScheme 
+?
+?
+ 
+'light'
+]
+;
+ 
+    |
+                       
+^
+ 
+ 10 |
+ 
+ 11 |
+   
+return
+ (
+ 
+ 12 |
+     
+<
+Tabs
+Call Stack
+TabLayout
+app/(tabs)/_layout.tsx:9:23
+See 9 more frames
+Component Stack
+TabLayout
+app/(tabs)/_layout.tsx:8:37
+RootLayout
+app/_layout.tsx:15:37
+See 36 more frames

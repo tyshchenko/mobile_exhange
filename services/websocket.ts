@@ -1,13 +1,15 @@
 
 import { useEffect, useState } from 'react';
-import io, { Socket } from 'socket.io-client';
+import { io } from 'socket.io-client';
 
 export function useWebSocket() {
-  const [socket, setSocket] = useState<Socket | null>(null);
+  const [socket, setSocket] = useState<any>(null);
 
   useEffect(() => {
     const newSocket = io('wss://your-crypto-websocket-server.repl.co', {
       transports: ['websocket'],
+      forceNew: true,
+      closeOnBeforeunload: false
     });
 
     newSocket.on('connect', () => {
@@ -21,7 +23,9 @@ export function useWebSocket() {
     setSocket(newSocket);
 
     return () => {
-      newSocket.close();
+      if (newSocket) {
+        newSocket.disconnect();
+      }
     };
   }, []);
 

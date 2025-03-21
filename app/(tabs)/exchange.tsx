@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, ScrollView, Pressable, TextInput } from 'react-native';
+import { View, StyleSheet, ScrollView, Pressable, TextInput, Dimensions } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { ThemedText } from '@/components/ThemedText';
@@ -70,7 +69,7 @@ export default function Exchange() {
   const handleCancel = async (orderId: string) => {
     try {
       await tradingService.cancelOrder(orderId);
-      setOrders(prev => prev.map(o => 
+      setOrders(prev => prev.map(o =>
         o.id === orderId ? { ...o, status: 'cancelled' } : o
       ));
     } catch (error) {
@@ -116,26 +115,30 @@ export default function Exchange() {
       <View style={styles.chart}>
         <LineChart
           data={chartData}
-          width={400}
+          width={Dimensions.get('window').width - 16}
           height={220}
           chartConfig={{
             backgroundColor: colorScheme === 'dark' ? '#1a1a1a' : '#ffffff',
             backgroundGradientFrom: colorScheme === 'dark' ? '#1a1a1a' : '#ffffff',
             backgroundGradientTo: colorScheme === 'dark' ? '#1a1a1a' : '#ffffff',
             decimalPlaces: 2,
-            color: (opacity = 1) => colorScheme === 'dark' ? 
-              `rgba(255, 255, 255, ${opacity})` : 
+            color: (opacity = 1) => colorScheme === 'dark' ?
+              `rgba(255, 255, 255, ${opacity})` :
               `rgba(0, 0, 0, ${opacity})`,
-            labelColor: (opacity = 1) => colorScheme === 'dark' ? 
-              `rgba(255, 255, 255, ${opacity})` : 
+            labelColor: (opacity = 1) => colorScheme === 'dark' ?
+              `rgba(255, 255, 255, ${opacity})` :
               `rgba(0, 0, 0, ${opacity})`,
           }}
           bezier
-          style={styles.chartStyle}
+          style={{
+            marginVertical: 8,
+            borderRadius: 16
+          }}
         />
       </View>
 
       <View style={styles.orderForm}>
+        <ThemedText style={styles.pairTitle}>BTC/USDT</ThemedText>
         <View style={styles.orderTypeButtons}>
           <Pressable
             style={[styles.typeButton, orderType === 'limit' && styles.selectedType]}
@@ -150,22 +153,6 @@ export default function Exchange() {
             <ThemedText>Market</ThemedText>
           </Pressable>
         </View>
-
-        <View style={styles.orderSideButtons}>
-          <Pressable
-            style={[styles.sideButton, orderSide === 'buy' && styles.buySelected]}
-            onPress={() => setOrderSide('buy')}
-          >
-            <ThemedText>Buy</ThemedText>
-          </Pressable>
-          <Pressable
-            style={[styles.sideButton, orderSide === 'sell' && styles.sellSelected]}
-            onPress={() => setOrderSide('sell')}
-          >
-            <ThemedText>Sell</ThemedText>
-          </Pressable>
-        </View>
-
         {orderType === 'limit' && (
           <TextInput
             style={styles.input}
@@ -245,6 +232,11 @@ const styles = StyleSheet.create({
   orderForm: {
     padding: 15,
   },
+  pairTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 15,
+  },
   orderTypeButtons: {
     flexDirection: 'row',
     marginBottom: 15,
@@ -259,23 +251,6 @@ const styles = StyleSheet.create({
   },
   selectedType: {
     backgroundColor: '#4a4a4a',
-  },
-  orderSideButtons: {
-    flexDirection: 'row',
-    marginBottom: 15,
-  },
-  sideButton: {
-    flex: 1,
-    padding: 10,
-    marginHorizontal: 5,
-    alignItems: 'center',
-    borderRadius: 5,
-  },
-  buySelected: {
-    backgroundColor: '#28a745',
-  },
-  sellSelected: {
-    backgroundColor: '#dc3545',
   },
   input: {
     backgroundColor: '#2a2a2a',

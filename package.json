@@ -21,6 +21,7 @@
     "@react-navigation/material-top-tabs": "^7.2.1",
     "@react-navigation/native": "^7.0.14",
     "@web3modal/wagmi": "^5.1.11",
+    "engine.io-client": "^6.5.2",
     "expo": "~52.0.40",
     "expo-blur": "~14.0.3",
     "expo-constants": "~17.0.8",
@@ -44,7 +45,7 @@
     "react-native-tab-view": "^4.0.6",
     "react-native-web": "~0.19.13",
     "react-native-webview": "13.12.5",
-    "socket.io-client": "^4.8.1",
+    "socket.io-client": "^4.7.2",
     "viem": "^2.23.13",
     "wagmi": "^2.14.15"
   },

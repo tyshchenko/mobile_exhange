@@ -1,5 +1,21 @@
 
-import AsyncStorage from '@react-native-async-storage/async-storage';
+const storage = {
+  getItem: (key: string) => {
+    try {
+      return Promise.resolve(localStorage.getItem(key));
+    } catch (e) {
+      return Promise.resolve(null);
+    }
+  },
+  setItem: (key: string, value: string) => {
+    try {
+      localStorage.setItem(key, value);
+      return Promise.resolve();
+    } catch (e) {
+      return Promise.resolve();
+    }
+  }
+};
 import { authService } from './auth';
 
 export type OrderType = 'market' | 'limit';
